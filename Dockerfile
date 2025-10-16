@@ -14,10 +14,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Cambiar el WORKDIR a la carpeta del servicio
-WORKDIR /usr/src/user_Service
+WORKDIR /usr/src/user_service
 
 # Exponer el puerto de FastAPI
 EXPOSE 8000
 
 # Comando para ejecutar la app
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
